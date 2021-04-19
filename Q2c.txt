@@ -3,7 +3,7 @@ FROM Member m
 INNER JOIN Entry e
   on m.MemberID = e.MemberID
 WHERE m.MemberID NOT IN
-( SELECT e.MemberID
-FROM Entry e
-Where e.Year = 2013);
+( SELECT f.MemberID
+FROM Entry f
+Where f.Year = 2013);
 
