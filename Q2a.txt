@@ -1,0 +1,4 @@
+SELECT LastName,FirstName,MemberID
+From Member
+WHERE Coach IS NULL;
+

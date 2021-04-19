@@ -1,0 +1,9 @@
+SELECT m.LastName,m.FirstName,m.MemberID
+FROM Member m
+INNER JOIN Entry e
+  on m.MemberID = e.MemberID
+WHERE m.MemberID NOT IN
+( SELECT e.MemberID
+FROM Entry e
+Where e.Year = 2013);
+

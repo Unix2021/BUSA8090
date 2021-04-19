@@ -1,0 +1,8 @@
+SELECT m.LastName,m.FirstName,m.MemberID, 
+COUNT(DISTINCT e.Year) 'Count'
+FROM Member m
+INNER JOIN Entry e
+  ON e.MemberID = m.MemberID
+GROUP BY m.LastName,m.FirstName,m.MemberID
+HAVING Count = 3;
+

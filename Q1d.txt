@@ -1,0 +1,5 @@
+SELECT metabolism, COUNT(*) 'count'
+FROM annotation
+GROUP BY metabolism
+HAVING count >1;
+
